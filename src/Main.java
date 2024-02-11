@@ -18,7 +18,8 @@ public class Main {
                 new TaskProperties("BugTitle", "BugDescription"),
                 Priority.HIGH
         );
-        TaskType bugType = new Bug(bugProperties);
-        Bug bug = TaskImpl.toTask(bugType);
+        TaskType<Bug> bugType = new Bug(bugProperties);
+        TaskImpl<Bug> taskImpl = new TaskImpl<>();
+        Bug bug = taskImpl.toTask(bugType);
     }
 }

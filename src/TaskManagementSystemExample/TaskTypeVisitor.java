@@ -1,10 +1,10 @@
 package TaskManagementSystemExample;
 
-public interface TaskTypeVisitor {
+public interface TaskTypeVisitor<T extends Task> {
 
     Bug visitBug(BugProperties bug);
     Story visitStory(StoryProperties story);
     Feedback visitFeedback(FeedbackProperties feedback);
-    Project visitProject(ProjectProperties project);
+//    Project visitProject(ProjectProperties project);
 
 }

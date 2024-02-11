@@ -1,6 +1,6 @@
 package TaskManagementSystemExample;
 
-public class Bug implements Task, TaskType {
+public class Bug implements Task, TaskType<Bug> {
 
     public BugProperties bugProperties;
 
@@ -9,7 +9,7 @@ public class Bug implements Task, TaskType {
     }
 
     @Override
-    public Bug accept(TaskTypeVisitor visitor) {
+    public Bug accept(TaskTypeVisitor<Bug> visitor) {
         return visitor.visitBug(bugProperties);
     }
 }

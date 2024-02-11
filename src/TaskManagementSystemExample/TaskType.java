@@ -1,7 +1,7 @@
 package TaskManagementSystemExample;
 
-public interface TaskType {
+public interface TaskType<T extends Task> {
 
-    <T extends Task> T accept(TaskTypeVisitor visitor);
+    T accept(TaskTypeVisitor<T> visitor);
 
 }
