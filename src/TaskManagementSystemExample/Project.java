@@ -1,6 +1,6 @@
 package TaskManagementSystemExample;
 
-public class Project implements Task, TaskType {
+public class Project implements Task, TaskVisitorToTaskType {
 
     ProjectProperties projectProperties;
 

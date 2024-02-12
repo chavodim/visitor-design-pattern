@@ -2,11 +2,11 @@ package TaskManagementSystemExample;
 
 public class TaskImpl<E extends Task> {
 
-    public E toTask(TaskType<E> taskType){
+    public E toTask(TaskVisitorToTaskType<E> taskType){
         return taskType.accept(new TaskTypeToTaskVisitor());
     }
 
-    public class TaskTypeToTaskVisitor implements TaskTypeVisitor<E> {
+    private static class TaskTypeToTaskVisitor implements TaskTypeVisitor {
 
         @Override
         public Bug visitBug(BugProperties bugProperties) {

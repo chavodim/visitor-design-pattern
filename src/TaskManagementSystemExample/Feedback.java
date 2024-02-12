@@ -1,6 +1,6 @@
 package TaskManagementSystemExample;
 
-public class Feedback implements Task, TaskType{
+public class Feedback implements Task, TaskVisitorToTaskType {
 
         FeedbackProperties feedbackProperties;
 
